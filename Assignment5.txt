@@ -43,4 +43,10 @@ var n = Int(readLine()!) ?? 0
 multi(n: &n) 
 print("Multiply by 2 :: \(n)")
 
-try checkprime(n: 10,15,20,9,7)
+do {
+  try checkprime(n: 10,15,20,9,7)
+} catch {
+  if let e = error as? counterr {
+    print(e.msg)
+  }
+}
